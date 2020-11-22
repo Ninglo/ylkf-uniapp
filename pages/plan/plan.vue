@@ -6,6 +6,7 @@
 			<view class="choose-action">计划表</view>
 			<view class="choose-action">课程库</view>
 		</view>
+		<!-- <image src="../../static/inquiry-active.png" mode="aspectFit" class="course-logo"></image> -->
 		<!-- 日历    导入的组件    https://ext.dcloud.net.cn/plugin?id=1732 -->
 		<!-- 需要数据 dotlist（需要被标记的日期） -->
 		<view class="calendar">
@@ -16,11 +17,11 @@
 		<!-- 需要数据 courses   course.date   course.logo   course.name   course.now   course.num-->
 		<view class="items">今日项目</view>
 		<view class="items-list">
-			<view class="course-card" v-for="(course,index) in userplanTable.planTable[0]" :key="index" >
-				<image src="course.logo" mode="aspectFit" class="course-logo"></image>
+			<view class="course-card" v-for="(course,index) in userPlanTable.planTable[0]" :key="index" @tap="courseStart" :data-courseid=course.id>
+				<image :src="course.logo" mode="aspectFit" class="course-logo"></image>
 				<view class="today-course-name">{{course.name}}</view>
 				<!-- <view class="today-course-progress">{{course.now}}/{{course.num}}</view> -->
-				<view class="today-course-action" @tap="courseStart">开始课程</view>
+				<view class="today-course-action">开始课程</view>
 			</view>
 		</view>
 		<!-- 所有已添加的课程，不需要用v-if进行判断 -->
@@ -40,42 +41,33 @@
 	export default {
 		data() {
 			return {
+				userPlanTable:{}
 			}
 		},
 		onLoad:function(){
 			this.getPlanTable()
-			
 		},
 		methods: {
-			courseStart() {
+			courseStart(e) {
+				var courseId = e.currentTarget.dataset.courseid
 				uni.navigateTo({
-					url: '../course/course'
+					url:'../course/course?courseId='+courseId
 				})
 			},
 			getPlanTable(){
 				uni.request({
-				url: 'http://192.168.43.214:3000/get_user_plan/4',
-				method: 'GET',
-				data: {
-					userPlanTable:{
-						id:"",
-						date:"",
-						name:"",
-						planTable:[]
-					}
-				},
-				success: res => {
-					console.log(res.data);
-					this.userplanTable.id = res.data.id,
-					this.userplanTable.date = res.data.date,
-					this.userplanTable.planTable = res.data.planTable
-				},
-				fail: () => {},
-				complete: () => {}
-			});
+					url: 'http://47.96.117.8:3000/get_user_plan/4',
+					method: 'GET',
+					data:{},
+					success: res => {
+						this.userPlanTable=res.data.data
+						console.log(this);
+					},
+					fail: () => {},
+					complete: () => {}
+				});
 			},
 			getPlanId(){
-				
 			}
 		}
 	}
@@ -136,7 +128,7 @@
 	.today-course-action{
 		position: relative;
 		left: 500rpx;
-		bottom: 120rpx;
+		bottom: 80rpx;
 	}
 /* 	.course-name{
 		position: relative;

@@ -19,7 +19,7 @@
 		<!-- action.name   action.logo   action.point   action.learnmore -->
 		<view class="action-list">
 			<view class="action-card" v-for="(action,index) in course.actions>
-				<image src="action.logo" mode="aspectFit" class="action-logo"></image>
+				<image :src="action.logo" mode="aspectFit" class="action-logo"></image>
 				<view class="action-name">动作{{index+1}}    {{action.name}}</view>
 				<view class="action-point">{{action.point}}</view>
 				<navigator url="action.learnmore" class="action-learnmore">详情了解</navigator>
@@ -32,22 +32,22 @@
 	export default {
 		data() {
 			return {
-				course: []
+				course: {}
 			}
 		},
-		onLoad:function(){
-				uni.request({
-					url: '',
-					method: 'GET',
-					data: {
-						course:[]
-					},
-					success: res => {
-						this.course=res.data;
-					},
-					fail: () => {},
-					complete: () => {}
-				});
+		onLoad:function(e){
+			console.log(e)
+			uni.request({
+				url: 'http://47.96.117.8:3000/get_course_plan/'+e.courseId,
+				method: 'GET',
+				data:{},
+				success: res => {
+					console.log(res)
+					this.course=res.data.data
+				},
+				fail: () => {},
+				complete: () => {}
+			})
 		},
 		methods: {
 			
