@@ -323,7 +323,6 @@
 .zzx-calendar {
 	width: 100%;
 	height: auto;
-	border: 5rpx solid #c8c7cc;
 	.calendar-heander {
 		text-align: center;
 		height: 60upx;

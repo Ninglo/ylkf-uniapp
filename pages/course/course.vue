@@ -57,68 +57,68 @@
 
 <style>
 	.course-box{
-		border-top: 4upx solid #c8c7cc;
-		border-bottom: 4upx solid #c8c7cc;
-		width: 750upx;
-		height: 250upx;	
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
+		width: 750rpx;
+		height: 250rpx;	
 		text-align: center;
-		padding:30upx ;
+		padding:30rpx ;
 	}
 	.course-info{
-		padding: 20upx;
-		margin-top: 20upx;
-		margin-bottom: 20upx;
-		border-top: 4upx solid #c8c7cc;
-		border-bottom: 4upx solid #c8c7cc;
+		padding: 20rpx;
+		margin-top: 20rpx;
+		margin-bottom: 20rpx;
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
 		text-align: center;
 	}
 	.course-name{
-		padding-top: 20upx;
-		font-size: 50upx;
+		padding-top: 20rpx;
+		font-size: 50rpx;
 	}
 	.course-start{
 		position: relative;
-		border: 4upx solid #c8c7cc;
-		width: 300upx;
-		top: 100upx;
-		left:200upx;
-		padding: 10upx;
+		border: 4rpx solid #c8c7cc;
+		width: 300rpx;
+		top: 100rpx;
+		left:200rpx;
+		padding: 10rpx;
 	}
 	.action-list{
-		border: 5upx solid #c8c7cc;
+		border: 5rpx solid #c8c7cc;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 20upx;
+		padding: 20rpx;
 	}
 	.action-card{
-		width: 650upx;
-		height: 180upx;
-		border: 4upx solid #c8c7cc;
-		border-bottom: 2upx solid #c8c7cc;
-		border-top: 2upx solid #c8c7cc;
+		width: 650rpx;
+		height: 180rpx;
+		border: 4rpx solid #c8c7cc;
+		border-bottom: 2rpx solid #c8c7cc;
+		border-top: 2rpx solid #c8c7cc;
 	}
 	.action-logo{
-		width: 150upx;
-		height: 150upx;
+		width: 150rpx;
+		height: 150rpx;
 		position: relative;
-		top:10upx;
-		left: 10upx;
+		top:10rpx;
+		left: 10rpx;
 	}
 	.action-name{
 		position: relative;
-		left: 180upx;
-		bottom: 150upx;
+		left: 180rpx;
+		bottom: 150rpx;
 	}
 	.action-point{
 		position: relative;
-		left: 180upx;
-		bottom:145upx;
-		font-size: 20upx;
+		left: 180rpx;
+		bottom:145rpx;
+		font-size: 20rpx;
 	}
 	.action-learnmore{
 		position: relative;
-		left: 500upx;
-		bottom: 100upx;
+		left: 500rpx;
+		bottom: 100rpx;
 	}
 </style>
