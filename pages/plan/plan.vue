@@ -17,7 +17,7 @@
 		<!-- 需要数据 courses   course.date   course.logo   course.name   course.now   course.num-->
 		<view class="items">今日项目</view>
 		<view class="items-list">
-			<view class="course-card" v-for="(course,index) in userPlanTable.planTable[0]" :key="index" @tap="courseStart" :data-courseid=course.id>
+			<view class="course-card" v-for="(course,index) in userPlanTable.planTable[0]" :key="index" @tap="courseStart" :data-courseid="course.id">
 				<image :src="course.logo" mode="aspectFit" class="course-logo"></image>
 				<view class="today-course-name">{{course.name}}</view>
 				<!-- <view class="today-course-progress">{{course.now}}/{{course.num}}</view> -->

@@ -12,16 +12,24 @@
 			"style": {
 				"navigationBarTitleText": "course",
 				"enablePullDownRefresh": false
-				}
-		}
-	    ,{
+			}
+		},
+		{
+			"path" : "pages/dayExercise/dayExercise",
+			"style" : {
+				"navigationBarTitleText":"12月29日锻炼报告",
+				"enablePullDownRefresh": false
+			}
+		},
+		
+		
+	    {
             "path" : "pages/inquiry/inquiry",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "inquiry",
                 "enablePullDownRefresh": false
             }
-            
         }
         ,{
             "path" : "pages/market/market",
@@ -58,33 +66,21 @@
 		"backgroundColor": "#F8F8F8",
 		"enablePullDownRefresh":true
 		
+	},
+	"tabBar":{
+		"list":[
+			{
+				"text":"首页",
+				"pagePath": "pages/plan/plan",
+				"iconPath":"static/course.png",
+				"selectedIconPath":"static/course-active.png"
+			},
+			{
+				"text":"我的",
+				"pagePath":"pages/mypage/mypage",
+				"iconPath":"static/mypage.png",
+				"selectedIconPath":"static/mypage-active.png"
+			}
+		]
 	}
-	// "tabBar":{
-	// 	"list":[
-	// 		{
-	// 			"text":"课程",
-	// 			"pagePath":"pages/course/course",
-	// 			"iconPath":"static/course.png",
-	// 			"selectedIconPath":"static/course-active.png"
-	// 		},
-	// 		{
-	// 			"text":"问诊",
-	// 			"pagePath":"pages/inquiry/inquiry",
-	// 			"iconPath":"static/inquiry.png",
-	// 			"selectedIconPath":"static/inquiry-active.png"
-	// 		},
-	// 		{
-	// 			"text":"商城",
-	// 			"pagePath":"pages/market/market",
-	// 			"iconPath":"static/market.png",
-	// 			"selectedIconPath":"static/market-active.png"
-	// 		},
-	// 		{
-	// 			"text":"我的",
-	// 			"pagePath":"pages/mypage/mypage",
-	// 			"iconPath":"static/mypage.png",
-	// 			"selectedIconPath":"static/mypage-active.png"
-	// 		}
-	// 	]
-	// }
 }

@@ -18,7 +18,7 @@
 		<!-- 需要数据 course.actions -->
 		<!-- action.name   action.logo   action.point   action.learnmore -->
 		<view class="action-list">
-			<view class="action-card" v-for="(action,index) in course.actions>
+			<view class="action-card" v-for="(action,index) in course.actions">
 				<image :src="action.logo" mode="aspectFit" class="action-logo"></image>
 				<view class="action-name">动作{{index+1}}    {{action.name}}</view>
 				<view class="action-point">{{action.point}}</view>
