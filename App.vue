@@ -16,7 +16,7 @@
 		//       success (res){
 		//         if (res.confirm) {
 		// 			uni.redirectTo({
-		// 				url:"../authorize/authorize",
+		// 				url:"../login/login",
 		// 				success() {
 		// 					console.log("成功跳转")
 		// 				},

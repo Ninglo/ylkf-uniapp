@@ -67,7 +67,14 @@
 			})
 		},
 		methods: {
-			
+			courseStart(e) {
+				/* var courseId = e.currentTarget.dataset.courseid */
+			uni.navigateTo({
+				/* url:'../course/course?courseId='+courseId */
+				url:'../video/video'
+				
+				})
+			},
 		}
 	}
 </script>

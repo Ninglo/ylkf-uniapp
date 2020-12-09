@@ -36,13 +36,13 @@
 			</view>
 		</view> -->
 		<view class="items-list">
-			<view class="course-card" >
-				<image src="../../static/背部放松.jpg" mode="aspectFit" class="course-logo"></image>
+			<view class="course-card" @tap="courseStart">
+				<image src="../../static/背部放松.jpg" mode="aspectFit" class="course-logo" ></image>
 				<view class="today-course-name">背部（背阔肌）放松训练</view>
 				<view class="today-course-action">开始课程</view>
 			</view>
-			<view class="course-card" >
-				<image src="../../static/肩关节放松.jpeg" mode="aspectFit" class="course-logo"></image>
+			<view class="course-card" @tap="courseStart">
+				<image src="../../static/肩关节放松.jpeg" mode="aspectFit" class="course-logo" ></image>
 				<view class="today-course-name">肩关节放松训练</view>
 				<view class="today-course-action">开始课程</view>
 			</view>
@@ -61,13 +61,15 @@
 		// onLoad:function(){
 		// 	this.getPlanTable()
 		// },
-		// methods: {
-		// 	courseStart(e) {
-		// 		var courseId = e.currentTarget.dataset.courseid
-		// 		uni.navigateTo({
-		// 			url:'../course/course?courseId='+courseId
-		// 		})
-		// 	},
+		 methods: {
+			courseStart(e) {
+				/* var courseId = e.currentTarget.dataset.courseid */
+			uni.navigateTo({
+				/* url:'../course/course?courseId='+courseId */
+				url:'../course/course'
+				
+		 		})
+		 	},
 		// 	getPlanTable(){
 		// 		uni.request({
 		// 			url: 'http://47.96.117.8:3000/get_user_plan/4',
@@ -83,7 +85,7 @@
 		// 	},
 		// 	getPlanId(){
 		// 	}
-		// }
+		 }
 	}
 	
 </script>
