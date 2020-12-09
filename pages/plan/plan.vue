@@ -37,13 +37,13 @@
 		</view> -->
 		<view class="items-list">
 			<view class="course-card" >
-				<image src="../../static/plan_active.png" mode="aspectFit" class="course-logo"></image>
-				<view class="today-course-name">nnn</view>
+				<image src="../../static/背部放松.jpg" mode="aspectFit" class="course-logo"></image>
+				<view class="today-course-name">背部（背阔肌）放松训练</view>
 				<view class="today-course-action">开始课程</view>
 			</view>
 			<view class="course-card" >
-				<image src="../../static/plan_active.png" mode="aspectFit" class="course-logo"></image>
-				<view class="today-course-name">nnn</view>
+				<image src="../../static/肩关节放松.jpeg" mode="aspectFit" class="course-logo"></image>
+				<view class="today-course-name">肩关节放松训练</view>
 				<view class="today-course-action">开始课程</view>
 			</view>
 		</view>
@@ -55,6 +55,7 @@
 		data() {
 			return {
 				userPlanTable:{}
+				
 			}
 		},
 		// onLoad:function(){
@@ -98,10 +99,13 @@
 	.header text{
 		color: #4CD964;
 	}
+	.calendar-title{
+		font-size: 35rpx;
+	}
 	.change-btn{
 		display: inline-block;
 		border: 3rpx solid #00aaff;
-		font-size: 25rpx;
+		font-size: 30rpx;
 		padding: 2rpx;
 		border-radius: 5rpx;
 		position: relative;
@@ -110,6 +114,7 @@
 	.big-data-box{
 		display: flex;
 		justify-content: space-evenly;
+		border-bottom: 1rpx solid #c8c7cc;
 	}
 	.data-box{
 		width: 200rpx;
@@ -127,6 +132,7 @@
 	}
 	.dt text{
 		color: #ff00ff;
+		font-size: 40rpx;
 	}
 	.calendar-title{
 		position: relative;
@@ -151,7 +157,8 @@
 		border: 5rpx solid #00aaff;
 	}
 	.items-list{
-		border: 3rpx solid #c8c7cc;
+		border-bottom: 2rpx solid #c8c7cc;
+		border-top: 2rpx solid #c8c7cc;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -161,6 +168,7 @@
 		padding: 20rpx;
 		padding-left: 10rpx;
 		padding-top: 40rpx;
+		font-size: 35rpx;
 	}
 	.course-card{
 		width: 650rpx;
@@ -168,11 +176,13 @@
 		border: 4rpx solid #c8c7cc;
 		border-bottom: 1rpx solid #c8c7cc;
 		border-top: 1rpx solid #c8c7cc;
+		
 	}
 	.today-course-name{
 		position: relative;
 		left: 190rpx;
 		bottom: 140rpx;
+		font-size: 30rpx;
 	}
 	.today-course-progress{
 		position: relative;
@@ -183,6 +193,7 @@
 		position: relative;
 		left: 500rpx;
 		bottom: 80rpx;
+		font-size: 30rpx;
 	}
 	.calendar{
 		padding-top: 30rpx;

@@ -92,6 +92,10 @@
 				type: Array, /// 打点日期列表
 				default() {
 					return [
+						{date:'2020-12-07'},
+						{date:'2020-12-09'},
+						{date:'2020-12-11'},
+						{date:'2020-12-13'}
 					]
 				}
 			},
@@ -189,7 +193,7 @@
 				days: [],
 				weekMode: true,
 				swiper: [0,1,2],
-				// dotList: [], // 打点的日期列表
+				dotList: [], // 打点的日期列表
 				selectedDate: formatDate(new Date(), 'yyyy-MM-dd')
 			};
 		},
@@ -230,14 +234,14 @@
 				let days = [];
 				if (this.weekMode) {
 					days = gegerateDates(date, 'week');
-					// this.selectedDate = days[0].fullDate;
+					this.selectedDate = days[0].fullDate;
 				} else {
 					days = gegerateDates(date, 'month');
-					// const sel = new Date(this.selectedDate.replace('-', '/').replace('-', '/'));
-					// const isMonth = sel.getFullYear() === this.currentYear && (sel.getMonth() + 1) === this.currentMonth;
-					// if(!isMonth) {
-					// 	this.selectedDate = formatDate(new Date(this.currentYear, this.currentMonth-1,1), 'yyyy-MM-dd')
-					// }
+					const sel = new Date(this.selectedDate.replace('-', '/').replace('-', '/'));
+					const isMonth = sel.getFullYear() === this.currentYear && (sel.getMonth() + 1) === this.currentMonth;
+					if(!isMonth) {
+						this.selectedDate = formatDate(new Date(this.currentYear, this.currentMonth-1,1), 'yyyy-MM-dd')
+					}
 				}
 				days.forEach(day => {
 					const dot = this.dotList.find(item => {
@@ -323,6 +327,8 @@
 .zzx-calendar {
 	width: 100%;
 	height: auto;
+	border-top: 1rpx solid #c8c7cc;
+	border-bottom: 1rpx solid #c8c7cc;
 	.calendar-heander {
 		text-align: center;
 		height: 60upx;

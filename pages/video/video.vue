@@ -6,7 +6,8 @@
 		</view>
 		<!-- 动作具体详情  course.action.info-->
 		<view class="action-info">
-			<text>    {{course.action.info}}</text>
+			<text>    <!-- {{course.action.info}} -->
+			背部伸展是健身房背肌下拉器械的替代动作，目标是在收缩时锻炼背阔肌的外部，拉伸时锻炼内部。 重要的是要始终保持持续的紧张状态，这样才能有效锻炼到相应部位的肌肉。</text>
 		</view>
 		<view class="action-choose">
 			<view class="action-box">前一个动作</view>
@@ -47,13 +48,12 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		border: 4rpx solid #c8c7cc;
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
 	}
 	.action-box{
 		padding: 10rpx;
-		border: 2rpx solid #c8c7cc;
-		border-left: 4rpx solid #c8c7cc;
-		border-right: 4rpx solid #c8c7cc;
+
 	}
 	.action-info{
 		padding: 20rpx;
@@ -62,6 +62,7 @@
 		border-top: 4rpx solid #c8c7cc;
 		border-bottom: 4rpx solid #c8c7cc;
 		text-align: center;
+		text-align-last:left ;
 	}
 	.video-box{
 		display: flex;

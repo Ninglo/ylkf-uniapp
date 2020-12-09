@@ -15,17 +15,17 @@
 				<view class="dt"><text>30</text>%</view>
 			</view>
 		</view>
-		<view class="middle">
+		<!-- <view class="middle">
 			<text>锻炼情况</text>
 			<view class="data-view"> </view>
-		</view>
+		</view> -->
 		<view class="foot">
 			<text>还记得吗...？</text>
 			<view class="record-box">
 				<view class="choose-time">
 					<image src="../../static/llast.png" mode="aspectFit"></image>
 					<image class="ll" src="../../static/last.png" mode="aspectFit"></image>
-					<view class="time">11月20日</view>
+					<view class="time">12月07日</view>
 					<image class="ll" src="../../static/later.png" mode="aspectFit"></image>
 					<image src="../../static/llater.png" mode="aspectFit"></image>
 				</view>
@@ -62,7 +62,7 @@
 	export default {
 		data() {
 			return {
-				courseNum: 3,
+				courseNum: 2,
 				courseTime: "03:27:39",
 				course: [{
 						name: "课程1"

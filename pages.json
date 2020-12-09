@@ -1,55 +1,82 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+		    "path" : "pages/mypage/mypage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "个人中心",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/video/video",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "vedio",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
 		{
 			"path":"pages/plan/report",
 			"style":{
-				"navigationBarTitleText":"YLKF",
+				"navigationBarTitleText":"课程报告",
 				"enablePullDownRefresh":true
 			}
 		},
 		{
+		    "path" : "pages/plan/selectPlan",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
 			"path": "pages/course/course",
 			"style": {
-				"navigationBarTitleText": "course",
+				"navigationBarTitleText": "课程",
 				"enablePullDownRefresh": false
 				}
 		}
-        ,{
-            "path" : "pages/mypage/mypage",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "mypage",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+		,
 		{
-            "path" : "pages/video/video",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "course",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/plan/plan",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/plan/selectPlan",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+		    "path" : "pages/dayExercise/dayExercise",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		{
+		    "path" : "pages/plan/plan",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登陆",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		
+        
+		
+		
+        
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
