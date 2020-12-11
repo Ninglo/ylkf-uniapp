@@ -69,11 +69,11 @@
 		methods: {
 			courseStart(e) {
 				/* var courseId = e.currentTarget.dataset.courseid */
-			uni.navigateTo({
-				/* url:'../course/course?courseId='+courseId */
-				url:'../video/video'
-				
-				})
+				uni.navigateTo({
+					/* url:'../course/course?courseId='+courseId */
+					url:'../video/video'
+					
+					})
 			},
 		}
 	}

@@ -12,7 +12,9 @@
 		<view class="action-choose">
 			<view class="action-box">前一个动作</view>
 			<view class="action-box">目前动作</view>
-			<view class="action-box">下一个动作</view>
+			<navigator url="../dayExercise/dayExercise">
+				<view class="action-box">下一个动作</view>
+			</navigator>
 		</view>
 	</view>
 </template>

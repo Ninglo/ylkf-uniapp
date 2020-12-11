@@ -23,12 +23,12 @@
 				<view class="data-list">健康状态：亚健康</view>
 			</view>
 			<view class="course-data" v-if="courseDataShow">
-				<view class="course" v-for="item in courses">
+				<navigator url="../plan/report" class="course" v-for="item in courses">
 					{{item.name}}课程（{{item.state}})
-					<navigator class="course-nav">
+					<view  class="course-nav">
 						>
-					</navigator>
-				</view>
+					</view>
+				</navigator>
 			</view>
 		</view>
 	</view>

@@ -8,9 +8,7 @@
 		        "navigationBarTitleText": "",
 		        "enablePullDownRefresh": false
 		    }
-		    
-		}
-		,
+		},
 		{
 		    "path" : "pages/mypage/mypage",
 		    "style" :                                                                                    
@@ -24,10 +22,9 @@
 		    "path" : "pages/video/video",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "vedio",
+		        "navigationBarTitleText": "视频",
 		        "enablePullDownRefresh": false
 		    }
-		    
 		},
 		{
 			"path":"pages/plan/report",
@@ -40,10 +37,9 @@
 		    "path" : "pages/plan/selectPlan",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
+		        "navigationBarTitleText": "选择方案",
 		        "enablePullDownRefresh": false
 		    }
-		    
 		},
 		{
 			"path": "pages/course/course",
@@ -57,12 +53,10 @@
 		    "path" : "pages/dayExercise/dayExercise",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
+		        "navigationBarTitleText": "日程锻炼报告",
 		        "enablePullDownRefresh": false
 		    }
-		    
 		},
-		
 		{
 		    "path" : "pages/login/login",
 		    "style" :                                                                                    
@@ -70,14 +64,23 @@
 		        "navigationBarTitleText": "登陆",
 		        "enablePullDownRefresh": false
 		    }
-		    
+		},
+		{
+			"path": "pages/market/market",
+			"style": 
+			{
+				"navigationBarTitleText": "商城",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/chat/chat",
+			"style":
+			{
+				"navigationBarTitleText": "聊天",
+				"enablePullDownRefresh": false
+			}
 		}
-		
-        
-		
-		
-        
-        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -94,6 +97,18 @@
 				"pagePath":"pages/plan/plan",
 				"iconPath":"static/plan.png",
 				"selectedIconPath":"static/plan_active.png"
+			},
+			{
+				"text": "商城",
+				"pagePath": "pages/market/market",
+				"iconPath": "static/market.png",
+				"selectedIconPath": "static/market-active.png"
+			},
+			{
+				"text": "聊天",
+				"pagePath": "pages/chat/chat",
+				"iconPath": "static/chat.png",
+				"selectedIconPath": "static/chat-active.png"
 			},
 			{
 				"text":"我的",
