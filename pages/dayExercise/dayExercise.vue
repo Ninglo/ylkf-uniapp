@@ -40,14 +40,14 @@
 		data() {
 			return {
 				date: new Date().toLocaleDateString(),
-				courseNum: 3,
-				courseTime: "03:27:39",
+				courseNum: 2,
+				courseTime: "00:27:39",
 				course: [
 					{
-						name: "课程1"
+						name: "拉伸"
 					},
 					{
-						name: "课程2"
+						name: "放松"
 					}
 				]
 			}

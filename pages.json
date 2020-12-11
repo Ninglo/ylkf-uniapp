@@ -1,64 +1,86 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
 		{
-			"path" : "pages/dayExercise/dayExercise",
-			"style" : {
-				"navigationBarTitleText":"12月29日锻炼报告",
-				"enablePullDownRefresh": false
-			}
+		    "path" : "pages/plan/plan",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
 		},
 		{
-			"path":"pages/plan/plan",
+		    "path" : "pages/mypage/mypage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "个人中心",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/video/video",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "视频",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
+			"path":"pages/plan/report",
 			"style":{
-				"navigationBarTitleText":"YLKF",
+				"navigationBarTitleText":"课程报告",
 				"enablePullDownRefresh":true
 			}
 		},
 		{
+		    "path" : "pages/plan/selectPlan",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "选择方案",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
 			"path": "pages/course/course",
 			"style": {
-				"navigationBarTitleText": "course",
+				"navigationBarTitleText": "课程",
 				"enablePullDownRefresh": false
+				}
+		}
+		,
+		{
+		    "path" : "pages/dayExercise/dayExercise",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "日程锻炼报告",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登陆",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
+			"path": "pages/market/market",
+			"style": 
+			{
+				"navigationBarTitleText": "商城",
+				"enablePullDownRefresh": true
 			}
 		},
-		
-		
-		
-	    {
-            "path" : "pages/inquiry/inquiry",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "inquiry",
-                "enablePullDownRefresh": false
-            }
-        }
-        ,{
-            "path" : "pages/market/market",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "market",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/mypage/mypage",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "mypage",
-                "enablePullDownRefresh": false
-            }
-            
-        },
 		{
-            "path" : "pages/video/video",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "course",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+			"path": "pages/chat/chat",
+			"style":
+			{
+				"navigationBarTitleText": "聊天",
+				"enablePullDownRefresh": false
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -72,9 +94,21 @@
 		"list":[
 			{
 				"text":"首页",
-				"pagePath": "pages/plan/plan",
-				"iconPath":"static/course.png",
-				"selectedIconPath":"static/course-active.png"
+				"pagePath":"pages/plan/plan",
+				"iconPath":"static/plan.png",
+				"selectedIconPath":"static/plan_active.png"
+			},
+			{
+				"text": "商城",
+				"pagePath": "pages/market/market",
+				"iconPath": "static/market.png",
+				"selectedIconPath": "static/market-active.png"
+			},
+			{
+				"text": "聊天",
+				"pagePath": "pages/chat/chat",
+				"iconPath": "static/chat.png",
+				"selectedIconPath": "static/chat-active.png"
 			},
 			{
 				"text":"我的",

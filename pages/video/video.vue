@@ -6,12 +6,15 @@
 		</view>
 		<!-- 动作具体详情  course.action.info-->
 		<view class="action-info">
-			<text>    {{course.action.info}}</text>
+			<text>    <!-- {{course.action.info}} -->
+			背部伸展是健身房背肌下拉器械的替代动作，目标是在收缩时锻炼背阔肌的外部，拉伸时锻炼内部。 重要的是要始终保持持续的紧张状态，这样才能有效锻炼到相应部位的肌肉。</text>
 		</view>
 		<view class="action-choose">
 			<view class="action-box">前一个动作</view>
 			<view class="action-box">目前动作</view>
-			<view class="action-box">下一个动作</view>
+			<navigator url="../dayExercise/dayExercise">
+				<view class="action-box">下一个动作</view>
+			</navigator>
 		</view>
 	</view>
 </template>
@@ -47,30 +50,30 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		border: 4upx solid #c8c7cc;
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
 	}
 	.action-box{
-		padding: 10upx;
-		border: 2upx solid #c8c7cc;
-		border-left: 4upx solid #c8c7cc;
-		border-right: 4upx solid #c8c7cc;
+		padding: 10rpx;
+
 	}
 	.action-info{
-		padding: 20upx;
-		margin-top: 20upx;
-		margin-bottom: 20upx;
-		border-top: 4upx solid #c8c7cc;
-		border-bottom: 4upx solid #c8c7cc;
+		padding: 20rpx;
+		margin-top: 20rpx;
+		margin-bottom: 20rpx;
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
 		text-align: center;
+		text-align-last:left ;
 	}
 	.video-box{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 750upx;
-		padding-top: 20upx;
-		padding-bottom: 20upx;
-		border-top: 4upx solid #c8c7cc;
-		border-bottom: 4upx solid #c8c7cc;
+		width: 750rpx;
+		padding-top: 20rpx;
+		padding-bottom: 20rpx;
+		border-top: 4rpx solid #c8c7cc;
+		border-bottom: 4rpx solid #c8c7cc;
 	}
 </style>

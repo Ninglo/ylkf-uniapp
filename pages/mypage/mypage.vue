@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<image src="../../static/背景.jpg" mode="aspectFill" class="bg-image"></image>
 		<button v-show="loginButtonShow" open-type="getUserInfo" @getuserinfo="bindgetuserinfo" withCredentials="true">登录</button>
 		<view v-if="userInfoShow">
 			<image class="user-img" :src="avatarUrl"></image>
@@ -16,15 +17,18 @@
 			<view @click="getBodyData()" class="data-button"><text>身体数据</text></view>
 			<view @click="getCourseData()" class="data-button"><text>课程报告</text></view>
 			<view class="body-data" v-if="bodyDataShow">
-				{{ bodyData }}
+				<view class="data-list">身高：180cm</view>
+				<view class="data-list">体重：55kg</view>
+				<view class="data-list">年龄：44</view>
+				<view class="data-list">健康状态：亚健康</view>
 			</view>
 			<view class="course-data" v-if="courseDataShow">
-				<view class="course" v-for="item in courses">
-					{{item.name}}方案/课程（{{item.state}})
-					<navigator class="course-nav">
+				<navigator url="../plan/report" class="course" v-for="item in courses">
+					{{item.name}}课程（{{item.state}})
+					<view  class="course-nav">
 						>
-					</navigator>
-				</view>
+					</view>
+				</navigator>
 			</view>
 		</view>
 	</view>
@@ -42,7 +46,7 @@
 				nickName: "",
 				loginButtonShow: true,
 				userInfoShow: false,
-				userInfo: "个人简介，个人简介",
+				userInfo: "something about me.",
 				
 				promptTitle: '提示',
 				promptDefaultValue: '',
@@ -51,15 +55,14 @@
 				maxlength: 30,
 				
 				bodyDataShow: true,
-				bodyData: "这里是身高、年龄、体重等\n基本数据的显示\n(用户输入)",
 				courseDataShow: false,
 				courses: [
 					{
-						name: "name1",
+						name: "拉伸训练",
 						state: "进行中"
 					},
 					{
-						name: "name2",
+						name: "感知恢复",
 						state: "已完成"
 					}
 				]
@@ -123,6 +126,14 @@
 </script>
 
 <style>
+	.bg-image{
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 	.user-img {
 		height: 200rpx;
 		width: 200rpx;
@@ -134,7 +145,7 @@
 		position: relative;
 		bottom: 150rpx;
 		left: 20rpx;
-		font-size: 30rpx;
+		font-size: 35rpx;
 	}
 	
 	.user-info-change {
@@ -168,7 +179,9 @@
 		width: 70rpx;
 		height: 70rpx;
 	}
-	
+	.data-list{
+		padding: 5rpx;
+		}
 	.data-button {
 		margin: 0 25rpx;
 		justify-content: center;
