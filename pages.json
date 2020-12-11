@@ -1,6 +1,13 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/dayExercise/dayExercise",
+			"style" : {
+				"navigationBarTitleText":"12月29日锻炼报告",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
 			"path":"pages/plan/plan",
 			"style":{
 				"navigationBarTitleText":"YLKF",
@@ -14,13 +21,7 @@
 				"enablePullDownRefresh": false
 			}
 		},
-		{
-			"path" : "pages/dayExercise/dayExercise",
-			"style" : {
-				"navigationBarTitleText":"12月29日锻炼报告",
-				"enablePullDownRefresh": false
-			}
-		},
+		
 		
 		
 	    {
