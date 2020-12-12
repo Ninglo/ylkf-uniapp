@@ -2,7 +2,11 @@
 	<view>
 		<!-- 视频 course.action.video -->
 		<view class="video-box">
-			<video src="course.action.video" controls></video>
+			<!-- src="https://static01.imgkr.com/temp/0205a862602e414488631a8400c6f8bd.mp4" -->
+			<video src="https://static01.imgkr.com/temp/0205a862602e414488631a8400c6f8bd.mp4"
+				controls
+				autoplay="true"
+			></video>
 		</view>
 		<!-- 动作具体详情  course.action.info-->
 		<view class="action-info">
@@ -28,18 +32,18 @@
 		},
 		methods: {
 			onLoad:function(){
-					uni.request({
-						url: '',
-						method: 'GET',
-						data: {
-							course: []
-						},
-						success: res => {
-							this.course=res.data;
-						},
-						fail: () => {},
-						complete: () => {}
-					});
+					// uni.request({
+					// 	url: '',
+					// 	method: 'GET',
+					// 	data: {
+					// 		course: []
+					// 	},
+					// 	success: res => {
+					// 		this.course=res.data;
+					// 	},
+					// 	fail: () => {},
+					// 	complete: () => {}
+					// });
 			}
 		}
 	}

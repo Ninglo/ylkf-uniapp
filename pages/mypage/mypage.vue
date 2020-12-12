@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<image src="../../static/背景.jpg" mode="aspectFill" class="bg-image"></image>
-		<button v-show="loginButtonShow" open-type="getUserInfo" @getuserinfo="bindgetuserinfo" withCredentials="true">登录</button>
-		<view v-if="userInfoShow">
+		<!-- <button v-show="loginButtonShow" open-type="getUserInfo" @getuserinfo="bindgetuserinfo" withCredentials="true">登录</button> -->
+		<view>
 			<image class="user-img" :src="avatarUrl"></image>
 			<text class="user-name">{{ nickName }}</text>
 			<navigator class="setting-nav">
@@ -44,8 +44,6 @@
 			return {
 				avatarUrl: "",
 				nickName: "",
-				loginButtonShow: true,
-				userInfoShow: false,
 				userInfo: "something about me.",
 				
 				promptTitle: '提示',
@@ -69,12 +67,12 @@
 			}
 		},
 		methods: {
-			bindgetuserinfo: function(res) {
-				this.avatarUrl = res.detail.userInfo.avatarUrl
-				this.nickName = res.detail.userInfo.nickName
-				this.loginButtonShow = false
-				this.userInfoShow = true
-			},
+			// bindgetuserinfo: function(res) {
+			// 	this.avatarUrl = res.detail.userInfo.avatarUrl
+			// 	this.nickName = res.detail.userInfo.nickName
+			// 	this.loginButtonShow = false
+			// 	this.userInfoShow = true
+			// },
 			/* 
 			* 打开提示框
 			*/
@@ -108,8 +106,16 @@
 			}
 		},
 		onLoad(e) {
+			uni.getUserInfo({
+			    success: (res) => {
+			        console.log(res)
+				    this.avatarUrl = res.userInfo.avatarUrl
+				    this.nickName = res.userInfo.nickName
+			    }
+			})
+			
 			//自定义input处理事件监听
-			uni.$on('update-prompt',(data)=>{
+			uni.$on('update-prompt', (data)=>{
 				// data.value input输入值
 				// data.callback 处理后返回方法名
 				let val = data.value
