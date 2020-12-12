@@ -3,9 +3,9 @@
 		<view class="">
 		<image src="../../static/logo.png" mode="aspectFit"></image>
 		</view>
-		<button type="primary">微信一键登录</button>
+		<button type="primary"  @tap="gotoPlan" >微信一键登录</button>
 		<navigator url="" class="nav">其他方式登录></navigator>
-		<checkbox-group  @change="selectCk">
+		<checkbox-group  >
 			<label style="display: flex;flex-direction: row;font-size: 30rpx;">
 				<checkbox value="yes"/><span style="display: flex;flex-direction: row;">我已经阅读并接受<navigator url="../xieyi/xianyi" open-type="navigate" style="color: #FF6000;">用户服务协议</navigator>、<navigator url="../xieyi/xianyi" open-type="navigate" style="color: #FF6000;">隐私政策</navigator></span>
 			</label>
@@ -21,7 +21,12 @@
 			}
 		},
 		methods: {
-			
+			gotoPlan: function() {
+				
+				uni.switchTab({
+					url:'../plan/plan_old'
+				})
+			},
 		}
 	}
 </script>

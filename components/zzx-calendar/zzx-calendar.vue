@@ -91,12 +91,7 @@
 			dotList: {
 				type: Array, /// 打点日期列表
 				default() {
-					return [
-						{date:'2020-12-07'},
-						{date:'2020-12-09'},
-						{date:'2020-12-11'},
-						{date:'2020-12-13'}
-					]
+					return []
 				}
 			},
 			showBack: {

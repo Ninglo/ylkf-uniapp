@@ -2,12 +2,21 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		
 		{
-		    "path" : "pages/plan/plan",
+		    "path" : "pages/plan/plan_old",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
+		        "navigationBarTitleText": "计划",
 		        "enablePullDownRefresh": false
 		    }
+		},
+		{
+		    "path" : "pages/questionnaire/first",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "疾病类型",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		},
 		{
 		    "path" : "pages/mypage/mypage",
@@ -34,7 +43,7 @@
 			}
 		},
 		{
-		    "path" : "pages/plan/selectPlan",
+		    "path" : "pages/questionnaire/selectPlan",
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "选择方案",
@@ -81,6 +90,16 @@
 				"enablePullDownRefresh": false
 			}
 		}
+        ,{
+            "path" : "pages/questionnaire/questionnaire",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -94,7 +113,7 @@
 		"list":[
 			{
 				"text":"首页",
-				"pagePath":"pages/plan/plan",
+				"pagePath":"pages/plan/plan_old",
 				"iconPath":"static/plan.png",
 				"selectedIconPath":"static/plan_active.png"
 			},

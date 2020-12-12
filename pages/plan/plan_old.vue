@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 顶部   需要数据 planname-->
-		<view class="header">已生成<text class="plan-text" space="ensp">  脑卒中康复  </text>计划 <view class="change-btn">修改计划</view></view>
+		<view class="header">已生成<text class="plan-text" space="ensp">  脑卒中康复  </text>计划 <view class="change-btn" @tap="gotoQ">修改计划</view></view>
 		<!-- 数据栏 -->
 		<view class="big-data-box">
 			<view class="data-box">
@@ -22,7 +22,7 @@
 		<!-- 需要数据 dotlist（需要被标记的日期） -->
 		<view class="calendar">
 			<view class="calendar-title">日程信息</view>
-			<zzx-calendar @selected-change="datechange" showBack="true"></zzx-calendar>
+			<calendar @selected-change="datechange" showBack="true" :dotList="dot"></calendar>
 		</view>
 		<!-- 今日项目栏 -->
 		<!-- 通过isToday判断是否显示-->
@@ -51,10 +51,21 @@
 </template>
 
 <script>
+	import calendar from "@/components/zzx-calendar/zzx-calendar.vue"
 	export default {
+		components:{
+			calendar
+		},
+	
 		data() {
 			return {
-				userPlanTable:{}
+				userPlanTable:{},
+				dot:[
+					{date:'2020-12-07'},
+					{date:'2020-12-09'},
+					{date:'2020-12-11'},
+					{date:'2020-12-13'}
+				]
 				
 			}
 		},
@@ -70,6 +81,14 @@
 				
 		 		})
 		 	},
+			gotoQ(e) {
+				/* var courseId = e.currentTarget.dataset.courseid */
+			uni.navigateTo({
+				/* url:'../course/course?courseId='+courseId */
+				url:'../questionnaire/first'
+				
+				})
+			},
 		// 	getPlanTable(){
 		// 		uni.request({
 		// 			url: 'http://47.96.117.8:3000/get_user_plan/4',

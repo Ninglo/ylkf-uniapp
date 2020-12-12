@@ -62,7 +62,7 @@
 						if (res.confirm){
 							console.log('确认')
 							uni.switchTab({
-								url:"plan",
+								url:"../plan/plan_old",
 								fail(e){
 									console.log(e)
 								}

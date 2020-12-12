@@ -114,7 +114,6 @@
 				// data.callback 处理后返回方法名
 				let val = data.value
 				//逻辑处理
-
 				uni.$emit(e.callback,val)
 			})
 		},
